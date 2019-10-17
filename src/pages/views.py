@@ -12,4 +12,8 @@ def home_view(request, *args, **kwargs):
 
 
 def contact_view(request, *args, **kwargs):
-    return render(request, "contact.html", {})
+    my_context = {
+        "my_text": "Esta es la página de contacto.",
+        "my_number": 316356
+    }
+    return render(request, "contact.html", my_context)
